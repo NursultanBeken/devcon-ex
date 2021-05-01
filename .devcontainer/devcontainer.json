@@ -1,10 +1,10 @@
 {
-    "name": "My devcontainer example",
-    "dockerComposeFile": "docker-compose.yml",
-    "service": "devcon-vscode",
+	"name": "My devcontainer example",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "devcon-vscode",
 	"remote.containers.workspaceMountConsistency": "consistent",
 	"workspaceFolder": "/workspace",
-    "mounts": [
+	"mounts": [
 		// Bash History
 		"source=python-bash_history,target=/commandhistory,type=volume"
 	],
