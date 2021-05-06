@@ -26,7 +26,8 @@
 		"mohsen1.prettify-json",
 		"redhat.vscode-yaml",
 		"njpwerner.autodocstring",
-		"ms-python.python"
+		"ms-python.python",
+		"mutantdino.resourcemonitor"
 	],
 	"settings": {
 		// Bracket Pair Colorizer

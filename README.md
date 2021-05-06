@@ -16,3 +16,4 @@
 * mohsen1.prettify-json - Prettify ugly JSON inside VSCode
 * ms-azuretools.vscode-docker - The Docker extension
 * CoenraadS.bracket-pair-colorizer - Bracket Pair Colorizer
+* mutantdino.resourcemonitor - Resource Monitor
