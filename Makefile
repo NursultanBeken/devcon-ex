@@ -14,7 +14,8 @@ build: clean
 	@printf "\n\n\033[0;32m** Packaging (dist) **\n\n\033[0m"
 	python setup.py sdist
 	pip install -e .
-
+	twine check dist/*
+	
 # clean artifacts between runs
 clean:
 	rm -rf __pycache__
@@ -23,6 +24,7 @@ clean:
 	rm -rf .coverage
 	rm -rf dist
 	rm -rf .pytest_cache
+	rm -rf build
 	pip uninstall $(package_name)
 
 # Static analysis with prospector for Python code
@@ -43,3 +45,6 @@ unittest: compile-dev-deps
 # Compile the dev dependencies.
 compile-dev-deps:
 	pip-compile $(dev_reqs_in) --output-file ./$(dev_reqs)
+
+package:
+	twine upload --repository testpypi dist/*	
