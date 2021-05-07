@@ -15,7 +15,7 @@ build: clean
 	python setup.py sdist
 	pip install -e .
 	twine check dist/*
-	
+
 # clean artifacts between runs
 clean:
 	rm -rf __pycache__
@@ -47,4 +47,5 @@ compile-dev-deps:
 	pip-compile $(dev_reqs_in) --output-file ./$(dev_reqs)
 
 package:
-	twine upload --repository testpypi dist/*	
+	twine upload --repository testpypi dist/*
+	twine upload dist/*
