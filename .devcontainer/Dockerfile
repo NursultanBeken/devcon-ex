@@ -9,6 +9,7 @@ RUN apt-get install -y mongo-tools
 
 # Install pip packages
 RUN pip install pip-tools
+RUN pip install --upgrade pip
 
 # Create a non-root user
 ARG USERNAME=python-dev

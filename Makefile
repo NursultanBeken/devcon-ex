@@ -46,7 +46,7 @@ unittest: dev-deps
 	python -m pytest -s -vvv tests/
 
 # Compile the dev dependencies.
-compile-dev-deps:
+compile-dev-deps: compile-prod-reqs
 	pip-compile $(dev_reqs_in) --output-file ./$(dev_reqs)
 
 
@@ -56,3 +56,9 @@ dev-deps: compile-dev-deps ## Sync the dev dependencies if they changed.
 package:
 	twine upload --repository testpypi dist/*
 	twine upload dist/*
+
+compile-prod-reqs: ## Compile the prod dependecies from setup.py.
+	pip-compile
+
+update-prod-reqs: ## Update the prod dependencies
+	pip-compile --upgrade
