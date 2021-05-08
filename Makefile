@@ -18,7 +18,6 @@ build: clean
 	@printf "\n\n\033[0;32m** Packaging (dist) **\n\n\033[0m"
 	python setup.py sdist
 	pip install -e .
-	twine check dist/*
 
 # clean artifacts between runs
 clean:
